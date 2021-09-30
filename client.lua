@@ -9,18 +9,18 @@
 -- variables
 local display = false
 local pageNumber = 1
-local MaxPages = 3
+local MaxPages = 1
 
 -- Key mapping
-RegisterCommand('+TenCodesOpen', function()
+RegisterCommand('StateCodes', function()
     SetDisplay(not display)
     SendNUIMessage({
         page = "page" .. pageNumber
     })
 end, false)
-RegisterKeyMapping('+TenCodesOpen', '10 Codes | Open', 'keyboard', 'down')
+RegisterKeyMapping('StateCodes', 'State Codes | Open', 'keyboard', 'down')
 
-RegisterCommand('+TenCodesPreviousPage', function()
+RegisterCommand('StateCodesPreviousPage', function()
     if pageNumber == 1 then
         pageNumber = pageNumber + MaxPages - 1
         SendNUIMessage({
@@ -33,9 +33,9 @@ RegisterCommand('+TenCodesPreviousPage', function()
         })
     end
 end, false)
-RegisterKeyMapping('+TenCodesPreviousPage', '10 Codes | Previous page', 'keyboard', 'left')
+RegisterKeyMapping('StateCodesPreviousPage', 'State Codes | Previous page', 'keyboard', 'left')
 
-RegisterCommand('+TenCodesNextPage', function()
+RegisterCommand('StateCodesNextPage', function()
     if pageNumber == MaxPages then
         pageNumber = pageNumber - MaxPages + 1
         SendNUIMessage({
@@ -48,7 +48,7 @@ RegisterCommand('+TenCodesNextPage', function()
         })
     end
 end, false)
-RegisterKeyMapping('+TenCodesNextPage', '10 Codes | Next page', 'keyboard', 'right')
+RegisterKeyMapping('+StateCodesNextPage', 'State Codes | Next page', 'keyboard', 'right')
 
 -- Close when NUI callback is close.
 RegisterNUICallback("close", function(data)
