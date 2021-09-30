@@ -6,9 +6,9 @@
 ------------------------------------------------------------------------
 ------------------------------------------------------------------------
 
-version "1.0"
-description "Ten Codes List"
-author "Andyyy#7666"
+version "1.1"
+description "State Codes List"
+author "Andyyy#7666 | Edited By WN23#5444"
 
 fx_version "bodacious"
 game "gta5"
