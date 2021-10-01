@@ -18,7 +18,7 @@ RegisterCommand('StateCodes', function()
         page = "page" .. pageNumber
     })
 end, false)
-RegisterKeyMapping('StateCodes', 'State Codes | Open', 'keyboard', 'down')
+--RegisterKeyMapping('StateCodes', 'State Codes | Open', 'keyboard', 'down')
 
 RegisterCommand('StateCodesPreviousPage', function()
     if pageNumber == 1 then
@@ -33,7 +33,7 @@ RegisterCommand('StateCodesPreviousPage', function()
         })
     end
 end, false)
-RegisterKeyMapping('StateCodesPreviousPage', 'State Codes | Previous page', 'keyboard', 'left')
+--RegisterKeyMapping('StateCodesPreviousPage', 'State Codes | Previous page', 'keyboard', 'left')
 
 RegisterCommand('StateCodesNextPage', function()
     if pageNumber == MaxPages then
@@ -48,7 +48,7 @@ RegisterCommand('StateCodesNextPage', function()
         })
     end
 end, false)
-RegisterKeyMapping('+StateCodesNextPage', 'State Codes | Next page', 'keyboard', 'right')
+--RegisterKeyMapping('+StateCodesNextPage', 'State Codes | Next page', 'keyboard', 'right')
 
 -- Close when NUI callback is close.
 RegisterNUICallback("close", function(data)
